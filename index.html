@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simplex Method Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Simplex Method Calculator</h1>
+
+  <div class="form-section">
+    <label>
+      Number of Variables:
+      <input type="number" id="numVars" min="1" value="2">
+    </label>
+
+    <label>
+      Number of Constraints:
+      <input type="number" id="numConstraints" min="1" value="2">
+    </label>
+
+    <button onclick="generateInputs()">Update</button>
+  </div>
+
+  <form onsubmit="event.preventDefault(); solveSimplex();">
+    <div id="inputFields"></div>
+    <button type="submit">Solve</button>
+  </form>
+
+  <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

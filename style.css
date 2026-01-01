@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  margin-right: 15px;
+}
+
+input {
+  width: 70px;
+  margin: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.simplex-table {
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.simplex-table th,
+.simplex-table td {
+  border: 1px solid #333;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.simplex-table th {
+  background-color: #eaeaea;
+}
+
+#output h3 {
+  margin-top: 20px;
+}
