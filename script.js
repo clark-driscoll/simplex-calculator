@@ -1,3 +1,6 @@
+
+
+
 function generateInputs() {
   const numVars = parseInt(document.getElementById("numVars").value);
   const numConstraints = parseInt(document.getElementById("numConstraints").value);
@@ -43,7 +46,7 @@ function solveSimplex() {
   output.innerHTML = "";
 
   if (result.status !== "Success") {
-    output.innerHTML = "❌ " + result.status;
+    output.innerHTML = "No Solution. The given problem is " + result.status;
     return;
   }
 
@@ -55,8 +58,8 @@ function solveSimplex() {
   const finalTableau = result.steps[result.steps.length - 1];
   const solution = extractSolution(finalTableau, numVars, numConstraints);
 
-  output.innerHTML += `<h3>✅ Optimal Value: ${result.optimal_value.toFixed(2)}</h3>`;
-  output.innerHTML += `<h3>Variable Values</h3>`;
+  output.innerHTML += `<h3>Optimal Value: ${result.optimal_value.toFixed(2)}</h3>`;
+  output.innerHTML += `<h3>Variable Values:</h3>`;
   solution.forEach((v, i) => {
     output.innerHTML += `x<sub>${i + 1}</sub> = ${v.toFixed(2)}<br>`;
   });
